@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/html/head') %>
+    
+    <link rel="stylesheet" href="/css/style-dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="main-container" class="d-flex"> 
+        <%- include('./partials/layout/side-menu') %>
+        <div id="main">
+            <%- include('./partials/layout/header') %>
+            <div class="row">
+                <div class="col-2">
+                    <div class="menu-dashboard">
+                        <h5 class="title-dashboard">DASHBOARD</h5>
+                        <a href="#"><p class="subtitle-dashboard">Dashboard</p></a>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="wrapper">
+                        <div class="breadcrumb">
+                            <h6>Dashboard</h6><i class='bx bx-chevron-right'></i><h6>Dashboard</h6>
+                        </div>  
+                        <div class="title">Dashboard </div>
+                        <div class="sub-title">List Order</div>
+
+                        <div class="table">
+                        <table class="table table-borderedless">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">User Email</th>
+                                <th scope="col">Car</th>
+                                <th scope="col">Start Rent</th>
+                                <th scope="col">Finish Rent</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <% data.forEach(function(data) { %>
+                                  <tr>
+                                    <th scope="row"><%= data.no%></th>
+                                    <td><%= data.userEmail %></td>
+                                    <td><%= data.car %></td>
+                                    <td><%= data.startRent %></td>
+                                    <td><%= data.finishRent %></td>
+                                    <td><%= data.price %></td>
+                                    <td><%= data.status %></td>
+                                  </tr>
+                                  <% }); %>
+                              </tbody>
+                        </table>
+                    </div>
+                    <div class="dropdown show">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                      </a>
+                    
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                    <div class="table">
+                        <table class="table table-borderedless">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Start Rent</th>
+                                <th scope="col">Finish Rent</th>
+                                <th scope="col">Created At</th>
+                                <th scope="col">Updated At</th>
+                              </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <% dataBawah.forEach(function(dataBawah) { %>
+                                  <tr>
+                                    <th scope="row"><%= dataBawah.no%></th>
+                                    <td><%= dataBawah.name %></td>
+                                    <td><%= dataBawah.category %></td>
+                                    <td><%= dataBawah.price%></td>
+                                    <td><%= dataBawah.startRent %></td>
+                                    <td><%= dataBawah.finishRent%></td>
+                                    <td><%= dataBawah.createdAt %></td>
+                                    <td><%= dataBawah.updatedAt %></td>
+                                  </tr>
+                                  <% }); %>
+                              </tbody>
+                        </table>
+                        <div class="dropdown show">
+                          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown link
+                          </a>
+                        
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </div>
+                    </div>
+                  </div>     
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/html/head') %>
+
+    <link rel="stylesheet" href="/css/style-listcar.css">
+    <title>List Car</title>
+</head>
+<body>
+    <div id="main-container" class="d-flex"> 
+        <%- include('./partials/layout/side-menu') %>
+        <div id="main">
+            <%- include('./partials/layout/header') %>
+            <div class="row">
+                <div class="col-2">
+                    <div class="menu-dashboard">
+                        <h5 class="title-dashboard">CAR</h5>
+                        <a href="#"><p class="subtitle-dashboard">List Car</p></a>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="wrapper">
+                        <div class="breadcrumb">
+                            <h6>Car</h6><i class='bx bx-chevron-right'></i><h6>List Car</h6>
+                        </div>
+                        <div class="head-group">
+                            <div class="list-car">List Car</div>
+                            <div class="button-right">
+                                <a href="http://localhost:1500/addcar"><button type="button" class="btn btn-primary"> + Add New Car</button></a>
+                            </div>
+                        </div>
+                        <%- include('./partials/list-car/btn-group') %>
+                        <section class="card-list">
+                            <%- include('./partials/list-car/car-card') %>
+                        </section>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/html/script') %>
+</body>
+</html>
