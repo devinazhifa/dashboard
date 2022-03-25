@@ -31,7 +31,7 @@ const data = [
 const dataBawah =[
     {
         no:1,
-        name: 'Toyota Avanza',
+        name: 'Pajero Sport',
         category: "Sedan",
         price: "500.000",
         startRent: "22-2-2022",
@@ -51,7 +51,7 @@ const dataBawah =[
     },
     {
         no:3,
-        name: 'Toyota Avanza',
+        name: 'Alpard',
         category: "Sedan",
         price: "500.000",
         startRent: "22-2-2022",

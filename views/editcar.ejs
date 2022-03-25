@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/html/head') %>
+
+    <link rel="stylesheet" href="/css/style-addcar.css">
+    <title>Edit Car</title>
+</head>
+<body>
+    <div id="main-container" class="d-flex"> 
+        
+        <%- include('./partials/layout/side-menu') %>
+        
+        <div id="main">    
+            <%- include('./partials/layout/header') %>
+            <div class="row">
+                <div class="col-2">
+                    <div class="menu-dashboard">
+                        <h5 class="title-dashboard">CARS</h5>
+                        <a href="#"><p class="subtitle-dashboard">List Car</p></a>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="kotak">
+                        <div class="breadcrumb">
+                            <h6>Car</h6><i class='bx bx-chevron-right'></i><h6>List Car</h6><i class='bx bx-chevron-right'></i><h6>Edit Car</h6>
+                        </div>  
+                        <div class="sub-title">Edit Car</div><br>
+                        <div class="wrapper">
+                            <div class="row">
+                                <div class="col-2">
+                                    <p>Nama*</p>
+                                    <p>Harga*</p>
+                                    <p>Foto*</p><br>
+                                    <p>Start Rent</p>
+                                    <p>Finish Rent</p>
+                                    <p>Created at</p>
+                                    <p>Updated at</p>
+                                </div>
+                                <div class="col-10">
+                                    <form>
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nama">
+                                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Harga">
+                                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Foto">
+                                          <p class="text">File size max. 2MB</p>
+                                        </div>            
+                                    </form>
+                                    <div class="text-frame">
+                                        <p>-</p>
+                                        <p>-</p>
+                                        <p>-</p>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="button" class="btn btn-outline-primary">Cancel</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Save</button>
+                            <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">Data Berhasil Diubah</div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/html/script') %>
+</body>
+</html>

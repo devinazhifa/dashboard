@@ -53,5 +53,6 @@ app.use("/addcar/", routers.addcar);
 app.use("/listcar/", routers.listcar);
 app.use("/dashboard/", routers.dashboard);
 app.use("/auth/", routers.auth);
+app.use("/editcar/", routers.editcar);
 
 app.listen(1500, () => { console.log(`localhost:${port} is running...`) })
